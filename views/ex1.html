@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inbar's Ch 25 hw9b Ex1</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <a href="/views/index.html">Link to Start Page</a>
+  <h2>Inbar's Sample Form</h2>
+  <form>
+    <p>
+      <label for="name">Name</label>:
+      <input type="text" name="name" id="name" required>
+    </p>
+    <p>
+      <label for="email">Email</label>:
+      <input type="email" name="email" id="email" required>
+    </p>
+    <p>
+      <label for="paymentType">Payment Type:</label><br>
+      <input type="radio" name="strongest" id="cash" checked>
+      <label value="cash">Cash</label>
+      <br>
+      <input type="radio" name="strongest" id="creditCard">
+      <label value="creditCard">Credit Card</label>
+      <br>
+      <input type="radio" name="strongest" id="googlePay">
+      <label value="googlePay">Google Pay</label>
+      <br>
+      <input type="radio" name="strongest" id="applePay">
+      <label value="applePay">Apple Pay</label>
+    </p>
+    <label for="promotions">Sign me up for special promotions:</label>
+    <input type="checkbox" id="promotions" name="promotions"><br><br>
+
+    <label for="location">Preferred Location:</label>
+    <select id="location" name="location">
+      <option value="losAngeles">Los Angeles</option>
+      <option value="orangeCounty">Orange County</option>
+      <option value="riverside">Riverside</option>
+      <option value="sanDiego">San Diego</option>
+    </select><br><br>
+
+    <button type="submit">Submit</button>
+    <button type="cancel">Cancel</button>
+  </form>
+  <p id="result"></p>
+  <script src="/ex1.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inbar's Ch 25 hw9b Ex2</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <a href="/views/index.html">Link to Start Page</a>
+  <h2>Inbar's Countries API Call</h2>
+  <button id="fetchDataBtn">Call API</button>
+  <p id="message"></p>
+
+  <script>
+      document.getElementById('fetchDataBtn').addEventListener('click', () => {
+          fetch('/api/countries', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                  name: 'Inbar Cohen',
+                  countries: ['USA', 'France', 'Japan']
+              })
+          })
+          .then(response => response.json())
+          .then(data => {
+              document.getElementById('message').textContent = data.message;
+          })
+          .catch(error => {
+              console.error('Error:', error);
+          });
+      });
+  </script>
+     
+  <script src="/ex2.js"></script>
+</body>
+
+</html>
